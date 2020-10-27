@@ -4,11 +4,25 @@ const arrayOfWords = ['cucumber', 'tomatos', 'avocado'];
 const complicatedArray = ['cucumber', 44, true];
 
 const makeAllCaps = (array) => {
-  // write some code
+  myPromise = new Promise ((resolve, reject) => {
+    if (array.every((word) => typeof word === "string")){
+      resolve(array.map((word) => word.toUpperCase()));
+    } else {
+      reject ("Error");
+    }
+  });
+  return myPromise;
 };
 
 const sortWords = (array) => {
-  // write some code
+  myPromise = new Promise ((resolve, reject) => {
+    if (array.every((word) => typeof word === "string")){
+      resolve(array.sort());
+    } else {
+      reject("Error");
+    }
+  })
+return myPromise;
 };
 
 // Calling (testing)
